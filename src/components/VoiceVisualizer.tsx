@@ -112,10 +112,13 @@ const VoiceVisualizer: React.FC = () => {
     // VAD 초기화
     console.log("[초기화] VAD 초기화 중...");
 
+    // base 경로 가져오기 (프로덕션: /sound-wave-demo/, 개발: /)
+    const basePath = import.meta.env.BASE_URL;
+
     // web-voice-detection 라이브러리로 VAD 초기화
     Detect.new({
-      workletURL: "/worklet.js",
-      modelURL: "/model.onnx",
+      workletURL: `${basePath}worklet.js`,
+      modelURL: `${basePath}model.onnx`,
       onSpeechStart: () => {
         console.log("[VAD] 음성 시작 감지");
 
