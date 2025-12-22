@@ -1,4 +1,3 @@
-import React from 'react';
 import VoiceVisualizer from './components/VoiceVisualizer';
 
 function App() {
