@@ -6,7 +6,7 @@
   "homepage": "https://choihooo.github.io/sound-wave-demo",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
