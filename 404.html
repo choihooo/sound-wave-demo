@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실시간 음성 파동 시각화 데모</title>
+    <script>
+      // GitHub Pages 404 리다이렉트
+      const path = window.location.pathname;
+      const basePath = '/sound-wave-demo';
+      const isProduction = path.startsWith(basePath);
+      const redirectPath = isProduction ? basePath : '';
+      
+      // 현재 경로를 쿼리 파라미터로 전달
+      const currentPath = window.location.pathname.replace(basePath, '') || '/';
+      window.location.replace(redirectPath + '/index.html?redirect=' + encodeURIComponent(currentPath));
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
